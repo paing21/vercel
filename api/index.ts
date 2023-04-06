@@ -30,7 +30,7 @@ const html = `
 
 `;
 
-app.get("/api/url", (req: Request, res: Response) => {
+app.get("/api/api", (req: Request, res: Response) => {
   res.send(html);
 });
 app.listen(port, () => {
