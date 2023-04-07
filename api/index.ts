@@ -7,9 +7,6 @@ const port = 4000;
 const users = { name: "mo mo", email: "momo@gmail.com", age: 20 };
 const apiurl = process.env.Url;
 console.log(apiurl);
-app.get("/user", (req: Request, res: Response) => {
-  res.send(users);
-});
 
 const html = `
 <!DOCTYPE html>
@@ -30,8 +27,11 @@ const html = `
 
 `;
 
-app.get("/api/api", (req: Request, res: Response) => {
+app.get("/api", (req: Request, res: Response) => {
   res.send(html);
+});
+app.get("/api/user", (req: Request, res: Response) => {
+  res.send(users);
 });
 app.listen(port, () => {
   console.log("I love ma ma");
