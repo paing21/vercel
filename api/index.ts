@@ -4,7 +4,6 @@ const app = express();
 app.use(express.static("public"));
 dotenv.config();
 const port = 4000;
-const users = { name: "mo mo", email: "momo@gmail.com", age: 20 };
 const apiurl = process.env.Url;
 console.log(apiurl);
 
@@ -30,9 +29,11 @@ const html = `
 app.get("/api", (req: Request, res: Response) => {
   res.send(html);
 });
-app.get("/api/user", (req: Request, res: Response) => {
-  res.send(users);
+
+app.get("/api/users", (req: Request, res: Response) => {
+  res.send({ name: "mo mo", email: "momo@gmail.com", age: 20 });
 });
+
 app.listen(port, () => {
   console.log("I love ma ma");
 });
