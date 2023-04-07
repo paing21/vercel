@@ -7,7 +7,7 @@ const port = 4000;
 const users = { name: "mo mo", email: "momo@gmail.com", age: 20 };
 const apiurl = process.env.Url;
 console.log(apiurl);
-app.get("/users", (req: Request, res: Response) => {
+app.get("/user", (req: Request, res: Response) => {
   res.send(users);
 });
 
