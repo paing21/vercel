@@ -30,7 +30,7 @@ app.get("/api", (req: Request, res: Response) => {
   res.send(html);
 });
 
-app.get("/api/users", (req: Request, res: Response) => {
+app.get("/users", (req: Request, res: Response) => {
   res.send({ name: "mo mo", email: "momo@gmail.com", age: 20 });
 });
 
