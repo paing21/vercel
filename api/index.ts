@@ -31,7 +31,7 @@ app.get("/api", (req: Request, res: Response) => {
 });
 
 app.get("/api/users", (req: Request, res: Response) => {
-  res.send({ name: "mo mo", email: "momo@gmail.com", age: 20 });
+  res.send(JSON.stringify({ name: "mo mo", email: "momo@gmail.com", age: 20 }));
 });
 
 app.listen(port, () => {
