@@ -2,7 +2,7 @@ import express, { Request, Response } from "express";
 import dotenv from "dotenv";
 const app = express();
 dotenv.config();
-const port = 4000;
+const port = 5000;
 const apiurl = process.env.Url;
 
 const html = `
@@ -29,7 +29,7 @@ app.get("/api", (req: Request, res: Response) => {
 });
 
 app.get("/api/customer", (req: Request, res: Response) => {
-  res.send("Hello");
+  res.send({ name: "Myat Phone Paing" });
 });
 
 app.listen(port, () => {
