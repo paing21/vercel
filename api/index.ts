@@ -27,7 +27,7 @@ app.use(express.static("public"));
 app.get("/api", (req: Request, res: Response) => {
   res.send(html);
 });
-
+app.use(express.json());
 app.get("/api/customer", (req: Request, res: Response) => {
   res.send({ name: "Myat Phone Paing" });
 });
