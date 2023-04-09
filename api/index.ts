@@ -29,7 +29,7 @@ app.get("/api", (req: Request, res: Response) => {
 });
 
 app.get("/api/customer", (req: Request, res: Response) => {
-  res.send({ name: "mo mo", age: 20 });
+  res.send("Hello world");
 });
 
 app.listen(port, () => {
